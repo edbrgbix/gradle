@@ -38,7 +38,6 @@ import java.util.function.Consumer
 import java.util.function.Predicate
 import java.util.regex.Pattern
 
-import static org.gradle.kotlin.dsl.resolver.KotlinBuildScriptModelRequestKt.fetchKotlinBuildScriptModelFor
 import static org.hamcrest.CoreMatchers.allOf
 import static org.hamcrest.CoreMatchers.containsString
 import static org.hamcrest.CoreMatchers.hasItem
@@ -97,11 +96,9 @@ abstract class AbstractKotlinScriptModelCrossVersionTest extends ToolingApiSpeci
     }
 
     protected KotlinBuildScriptModel kotlinBuildScriptModelFor(File projectDir, File scriptFile = null) {
-        return fetchKotlinBuildScriptModelFor(
-            projectDir,
-            scriptFile,
-            { selectedProjectDir -> rawConnector().forProjectDirectory(selectedProjectDir) }
-        )
+        withConnection(connector().forProjectDirectory(projectDir)) {
+            return it.getModel(KotlinBuildScriptModel)
+        }
     }
 
     protected static List<File> canonicalClasspathOf(KotlinBuildScriptModel model) {
