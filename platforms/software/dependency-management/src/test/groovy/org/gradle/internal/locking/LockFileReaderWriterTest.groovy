@@ -65,7 +65,7 @@ class LockFileReaderWriterTest extends Specification {
 bar=a
 foo=a,b
 empty=c
-""".denormalize()
+"""
         !lockDir.exists()
     }
 
@@ -92,7 +92,7 @@ bar=b,d
 foo=a,b
 foobar=d
 empty=c,e,f
-""".denormalize()
+"""
     }
 
     def 'writes a unique lock file to a custom location'() {
@@ -109,7 +109,7 @@ empty=c,e,f
 bar=a
 foo=a,b
 empty=c
-""".denormalize()
+"""
         !lockDir.exists()
     }
 
@@ -197,7 +197,7 @@ empty=d
 bar=a
 foo=a,b
 empty=c
-""".denormalize()
+"""
 
     }
 
