@@ -1,7 +1,3 @@
-# Gradle
-# ------
-.gradle
-/build
 /*/build
 /*/*/build
 /*/*/*/build
@@ -12,52 +8,19 @@
 test-splits/
 /gradle/verification-keyring.gpg
 
-# Kotlin
-# ------
-.kotlin
-
 # IDEA
-# ----
 !/.idea
 /.idea/*
-# Needed to track entry points and nullability annotations (see https://youtrack.jetbrains.com/issue/IDEA-354114 and https://youtrack.jetbrains.com/issue/IDEA-354115)
-!/.idea/misc.xml
-!/.idea/codeStyles
+Needed to track entry points and nullability annotations (see https://youtrack.jetbrains.com/issue/IDEA-354114 and https://youtrack.jetbrains.com/issue/IDEA-354115)
 !/.idea/inspectionProfiles
 !/.idea/icon.png
 !/.idea/icon_dark.png
-!/.idea/gradle.xml
-*/**/.idea
-*/**/.shelf
-.shelf
-/*.iml
-/*/*.iml
-/*/*/*.iml
-/*/*/*/*.iml
-/*/*/*/*/*.iml
-/out
-/*/out
-/*/*/out
-/*/*/*/out
-/*/*/*/*/out
 /.teamcity/target
-/gradle.ipr
-/gradle.iws
 
-# Eclipse
-# -------
 *.classpath
-*.project
-*.settings
-/bin
-/subprojects/*/bin
 atlassian-ide-plugin.xml
-.metadata/
 
-# NetBeans
-# --------
 .nb-gradle
-.nb-gradle-properties
 
 # Vim
 # ---
@@ -82,9 +45,6 @@ atlassian-ide-plugin.xml
 *.bkp
 *.dtmp
 
-# jEnv
-# ----
-.java-version
 
 # macOS
 # ----
@@ -94,9 +54,6 @@ atlassian-ide-plugin.xml
 # -----
 *.hprof
 
-# Work dirs
-# ---------
-/incoming-distributions
 /intTestHomeDir
 
 # Logs
@@ -108,12 +65,55 @@ atlassian-ide-plugin.xml
 # ps output for cleaning up leaking Java processes
 *.psoutput
 
-# oh-my-zsh gradle plugin
+oh-my-zsh gradle plugin
 .gradletasknamecache
 
 # Added GE support maven support to the maven build in .teamcity, per the GE docs, this dir is NOT to be committed
 .teamcity/.mvn/.develocity/
-/discoclient.properties
 
-# Ignore local configuration files for asdf, allowing the JDK to be configured for project (https://asdf-vm.com)
-.tool-versions
+Ignore local configuration files for asdf, allowing the JDK to be configured for project (https://asdf-vm.com)
+*.apache.org
+restriction
+fail
+deny
+blocked
+abort
+bug
+error
+err
+.ruby
+.rails
+.ignore
+system_ext
+manual
+redact
+redacted
+loss
+.cn
+.ru
+.insta
+se*
+ack
+jac
+.gov
+termux
+.lool
+.ai
+.lk
+.trusty
+agent
+.asc
+.iso
+index.php
+.null
+exit
+kill
+clean
+purge
+archive
+cc*
+r0
+xr
+~
+\
+¥
